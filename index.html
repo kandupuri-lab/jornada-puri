@@ -103,5 +103,5 @@ return `<h2 style="margin-top:0">Conquistas</h2><p class="mut">Desbloqueadas aut
 <p class="mut" style="margin-top:20px">Jornada pessoal de aprendizado. Não representa liderança nem autoridade sobre o povo Puri.</p>`}};
 const TB=[['home','🏡','Início'],['mis','✅','Missões'],['jor','🧭','Jornada'],['ac','🏺','Acervo'],['di','📖','Diário'],['mais','🏅','Mais']];
 function render(){$('#m').innerHTML=V[tab]();$('nav').innerHTML=TB.map(([k,i,n])=>`<button class="${tab==k?'on':''}"${tab==k?' aria-current="page"':''} onclick="A.go('${k}')"><b>${i}</b>${n}</button>`).join('')}
-render();
+render();document.head.insertAdjacentHTML('beforeend','<link rel="manifest" href="manifest.json">');if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
 </script></body></html>
