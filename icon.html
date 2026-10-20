@@ -1,0 +1,3 @@
+<!DOCTYPE html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gerar ícone</title>
+<canvas id="c" width="512" height="512" style="max-width:100%"></canvas><br><br><a id="a" download="icon-512.png" style="font:22px sans-serif">Baixar ícone</a>
+<script>const c=document.getElementById('c'),x=c.getContext('2d');x.fillStyle='#10241E';x.fillRect(0,0,512,512);x.fillStyle='#E8BE69';x.beginPath();x.arc(256,256,154,0,7);x.fill();x.fillStyle='#B96F4D';x.beginPath();x.ellipse(256,256,62,108,0,0,7);x.fill();document.getElementById('a').href=c.toDataURL('image/png')</script>
